@@ -8,8 +8,8 @@ version="2.3"
 version_full="scan-network v."+version
 Action="range_scan" # Default action
 
-x=100
-y=254
+x=2
+y=251
 ping_delay=0 # in seconds
 ip="192.168.1.*"
 
@@ -140,7 +140,8 @@ def doListScan(inputList):
     for Host in ListOfHosts:
        Host.join()
        if Host.Status == -1:
-          print(Host.Adress+" not responding, offline")
+          #print(Host.Adress+" not responding, offline")
+          pass
        else:
           print(Host.Adress+" responds in "+str(Host.Status)+"ms")
 
@@ -172,7 +173,8 @@ def doRangeScan():
                 for Host in ListOfHosts:
                     Host.join()
                     if Host.Status == -1:
-                       print(Host.Adress+" not responding, offline")
+                       #print(Host.Adress+" not responding, offline")
+                       pass
                     else:
                         print(Host.Adress+" responds in "+str(Host.Status)+"ms")
 
